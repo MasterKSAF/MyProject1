@@ -140,6 +140,11 @@ def parse_args() -> argparse.Namespace:
         description="Stage 4 baseline training for steel defect classification."
     )
     parser.add_argument("--project-root", default=None, help="Path to the project root.")
+    parser.add_argument(
+        "--dataset-root",
+        default=None,
+        help="Path to the dataset root that contains the DB folder contents.",
+    )
     parser.add_argument("--manifest-dir", default=None, help="Path to stage 3 manifests.")
     parser.add_argument("--output-dir", default=None, help="Directory for stage 4 outputs.")
     parser.add_argument("--image-size", type=int, default=224)
@@ -214,7 +219,13 @@ def detect_manifest_dir(project_root: Path, manifest_dir_arg: str | None) -> Pat
 def build_run_config(args: argparse.Namespace) -> RunConfig:
     project_root = detect_project_root(args.project_root)
     manifest_dir = detect_manifest_dir(project_root, args.manifest_dir)
-    dataset_root = project_root / "DB"
+    dataset_root = (
+        Path(args.dataset_root).resolve()
+        if args.dataset_root
+        else (project_root / "DB").resolve()
+    )
+    if not dataset_root.exists():
+        raise FileNotFoundError(f"Dataset root not found: {dataset_root}")
 
     output_dir = (
         Path(args.output_dir).resolve()
