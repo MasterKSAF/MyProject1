@@ -1,5 +1,5 @@
 param(
-    [string]$ProjectRoot = "C:\Users\User\Desktop\MyProject1",
+    [string]$ProjectRoot = "C:\Users\Misha\Documents\GitHub\MyProject1",
     [int]$Seed = 42
 )
 

@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+DB/
+MyProject1/
+stage4_outputs/
+stage3_previews/
