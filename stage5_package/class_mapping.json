@@ -1,0 +1,42 @@
+{
+  "0": {
+    "class_id": 1,
+    "class_name": "punching_hole"
+  },
+  "1": {
+    "class_id": 2,
+    "class_name": "welding_line"
+  },
+  "2": {
+    "class_id": 3,
+    "class_name": "crescent_gap"
+  },
+  "3": {
+    "class_id": 4,
+    "class_name": "water_spot"
+  },
+  "4": {
+    "class_id": 5,
+    "class_name": "oil_spot"
+  },
+  "5": {
+    "class_id": 6,
+    "class_name": "silk_spot"
+  },
+  "6": {
+    "class_id": 7,
+    "class_name": "inclusion"
+  },
+  "7": {
+    "class_id": 8,
+    "class_name": "rolled_pit"
+  },
+  "8": {
+    "class_id": 9,
+    "class_name": "crease"
+  },
+  "9": {
+    "class_id": 10,
+    "class_name": "waist_folding"
+  }
+}
