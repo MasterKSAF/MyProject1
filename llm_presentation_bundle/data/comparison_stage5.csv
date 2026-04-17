@@ -1,0 +1,4 @@
+experiment_name,model_name,image_size,batch_size,num_epochs,best_val_accuracy,test_accuracy,macro_avg_f1,weighted_avg_f1,trainable_parameters,artifacts_dir,parameters_millions,accuracy_per_million_params
+resnet34_deeper,resnet34,160,128,6,0.8676470588235294,0.8461538461538461,0.752795515277264,0.850788255056296,21289802,/content/drive/MyDrive/MyProject1/stage5_package/experiment_outputs/resnet34_deeper,21.289802,0.03974456155833887
+resnet18_baseline,resnet18,160,256,6,0.7242647058823529,0.6923076923076923,0.6511810775745202,0.6912309614102476,11181642,/content/drive/MyDrive/MyProject1/stage5_package/experiment_outputs/resnet18_baseline,11.181642,0.061914671593643604
+mobilenet_v3_small_fast,mobilenet_v3_small,160,256,6,0.20955882352941177,0.2564102564102564,0.11974650167420353,0.25299646233330947,1528106,/content/drive/MyDrive/MyProject1/stage5_package/experiment_outputs/mobilenet_v3_small_fast,1.528106,0.16779611912410292

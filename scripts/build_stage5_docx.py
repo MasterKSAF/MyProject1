@@ -5,7 +5,7 @@ from docx import Document
 from docx.shared import Pt
 
 
-ROOT = Path(r"C:\Users\Misha\Documents\GitHub\MyProject1")
+ROOT = Path(__file__).resolve().parents[1]
 SOURCE_PATH = ROOT / "docs" / "stage5_submission_ru.md"
 OUTPUT_PATH = ROOT / "docs" / "5.docx"
 

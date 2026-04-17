@@ -15,7 +15,7 @@
 
 - `stage5_experiments_colab.ipynb`
 - `stage5_final_inference_colab.ipynb`
-- `resnet34_best_model.pth`
+- `resnet18_best_model.pth`
 - `class_mapping.json`
 - `sample_images/punching_hole_sample.jpg`
 - `experiment_outputs`
@@ -38,20 +38,20 @@ Word-документ из этапа 4 приложен в этой же пап
 2. `resnet34_deeper`
 3. `mobilenet_v3_small_fast`
 
-Итоговые результаты:
+Итоговые результаты по Accuracy после обновлённого сравнения на 20 эпохах:
 
-- `resnet34_deeper`: `test_accuracy = 0.8462`, `macro_f1 = 0.7528`
-- `resnet18_baseline`: `test_accuracy = 0.6923`, `macro_f1 = 0.6512`
-- `mobilenet_v3_small_fast`: `test_accuracy = 0.2564`, `macro_f1 = 0.1197`
+- `resnet18_baseline`: `test_accuracy = 0.8974`
+- `resnet34_deeper`: `test_accuracy = 0.8571`
+- `mobilenet_v3_small_fast`: `test_accuracy = 0.4908`
 
-По итогам сравнения в качестве финальной модели выбрана `resnet34`, так как она показала лучший результат по качеству распознавания.
+По итогам сравнения в качестве финальной модели выбрана `resnet18`, так как она показала лучшую Accuracy на тестовой выборке.
 
 5. Финальный ноутбук
 
 Ссылка на финальный Colab-ноутбук:
 [Colab final inference](https://colab.research.google.com/drive/1M7UG4lIfyHO01GoqDUuKJuW8FRvs0Gkt?usp=sharing)
 
-Финальный ноутбук использует модель `resnet34` и веса `resnet34_best_model.pth`.
+Финальный ноутбук использует модель `resnet18` и веса `resnet18_best_model.pth`.
 
 В ноутбуке реализованы:
 
@@ -80,5 +80,5 @@ Word-документ из этапа 4 приложен в этой же пап
 - есть ноутбук с экспериментами
 - есть финальный пользовательский ноутбук
 - все необходимые дополнительные файлы лежат рядом
-- выбрана финальная модель `resnet34`
+- выбрана финальная модель `resnet18`
 - Word-документ из этапа 4 приложен в ту же папку этапа 5
