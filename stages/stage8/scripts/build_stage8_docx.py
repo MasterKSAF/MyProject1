@@ -4,10 +4,10 @@ import re
 from docx import Document
 from docx.shared import Pt
 
-
-ROOT = Path(r"C:\Users\Misha\Documents\GitHub\MyProject1")
-SOURCE_PATH = ROOT / "docs" / "stage8_exam_memo_ru.md"
-OUTPUT_PATH = ROOT / "docs" / "stage8_exam_memo.docx"
+ROOT = Path(__file__).resolve().parents[3]
+STAGE_DIR = ROOT / "stages" / "stage8"
+SOURCE_PATH = STAGE_DIR / "docs" / "stage8_exam_memo_ru.md"
+OUTPUT_PATH = STAGE_DIR / "docs" / "stage8_exam_memo.docx"
 
 
 def normalize_line(line: str) -> str:

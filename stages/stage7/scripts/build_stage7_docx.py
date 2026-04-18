@@ -1,13 +1,12 @@
 from pathlib import Path
 import re
-
 from docx import Document
 from docx.shared import Pt
 
-
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE_PATH = ROOT / "docs" / "stage7_presentation_slides_ru.md"
-OUTPUT_PATH = ROOT / "docs" / "stage7_presentation_slides.docx"
+ROOT = Path(__file__).resolve().parents[3]
+STAGE_DIR = ROOT / "stages" / "stage7"
+SOURCE_PATH = STAGE_DIR / "docs" / "stage7_defense_notes_ru.md"
+OUTPUT_PATH = STAGE_DIR / "docs" / "stage7_defense_notes.docx"
 
 
 def normalize_line(line: str) -> str:
@@ -30,6 +29,9 @@ def main() -> None:
             continue
         if line.startswith("## "):
             document.add_heading(normalize_line(line[3:].strip()), level=2)
+            continue
+        if line.startswith("### "):
+            document.add_heading(normalize_line(line[4:].strip()), level=3)
             continue
         if not line:
             document.add_paragraph("")

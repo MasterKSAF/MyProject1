@@ -1,7 +1,9 @@
-__pycache__/
+﻿__pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 DB/
-MyProject1/
-stage4_outputs/
-stage3_previews/
+~$*.docx
+/docs/stage7_defense_notes_v2.docx
+stages/stage3/local_previews/
+stages/stage3/legacy_copy/
+scripts/__pycache__/

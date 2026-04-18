@@ -11,11 +11,13 @@ import imageio_ffmpeg
 from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_PDF = PROJECT_ROOT / "Presentation_google_slides_safe.pdf"
-DEFAULT_SCRIPT = PROJECT_ROOT / "docs" / "stage7_demo_script.json"
-DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "docs" / "stage7_demo_build"
-DEFAULT_OUTPUT_VIDEO = PROJECT_ROOT / "docs" / "stage7_defense_demo_ru.mp4"
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+STAGE_DIR = PROJECT_ROOT / "stages" / "stage7"
+STAGE6_DIR = PROJECT_ROOT / "stages" / "stage6"
+DEFAULT_PDF = STAGE6_DIR / "presentation" / "Presentation_google_slides_safe.pdf"
+DEFAULT_SCRIPT = STAGE_DIR / "docs" / "stage7_demo_script.json"
+DEFAULT_OUTPUT_DIR = STAGE_DIR / "docs" / "stage7_demo_build"
+DEFAULT_OUTPUT_VIDEO = STAGE_DIR / "docs" / "stage7_defense_demo_ru.mp4"
 
 VIDEO_SIZE = (1920, 1080)
 FPS = 24

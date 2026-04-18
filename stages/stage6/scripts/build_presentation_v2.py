@@ -11,11 +11,12 @@ from pptx.util import Pt
 from pptx.util import Inches
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE_PPTX = ROOT / "Presentation.pptx"
-OUTPUT_PPTX = ROOT / "Presentation_v2.pptx"
-TEMP_OUTPUT_PPTX = ROOT / "Presentation_v2_tmp_build.pptx"
-CHART_PATH = ROOT / "docs" / "presentation_v2_comparison.png"
+ROOT = Path(__file__).resolve().parents[3]
+STAGE_DIR = ROOT / "stages" / "stage6"
+SOURCE_PPTX = STAGE_DIR / "presentation" / "Presentation.pptx"
+OUTPUT_PPTX = STAGE_DIR / "presentation" / "Presentation_v2_checked.pptx"
+TEMP_OUTPUT_PPTX = STAGE_DIR / "presentation" / "Presentation_v2_tmp_build.pptx"
+CHART_PATH = STAGE_DIR / "presentation" / "presentation_v2_comparison.png"
 
 
 def set_shape_text(shape, text: str) -> None:

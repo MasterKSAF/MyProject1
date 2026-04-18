@@ -5,9 +5,10 @@ from docx import Document
 from docx.shared import Pt
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE_PATH = ROOT / "docs" / "stage5_submission_ru.md"
-OUTPUT_PATH = ROOT / "docs" / "5.docx"
+ROOT = Path(__file__).resolve().parents[3]
+STAGE_DIR = ROOT / "stages" / "stage5"
+SOURCE_PATH = STAGE_DIR / "report" / "stage5_submission_ru.md"
+OUTPUT_PATH = STAGE_DIR / "report" / "5.docx"
 
 
 def normalize_line(line: str) -> str:
